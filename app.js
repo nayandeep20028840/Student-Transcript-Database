@@ -9,7 +9,7 @@ const mongoose = require('mongoose'); //to connect to mongodb
 const dburl = 'mongodb+srv://vipul1:Test1234@nodetut.tqrfbx6.mongodb.net/student_results?retryWrites=true&w=majority' ;
 mongoose.set('strictQuery',true) ;
 mongoose.connect(dburl) 
-.then((result) => app.listen(3069,'0.0.0.0')) // we want to listen for  after server is connected to mongodb
+.then((result) => app.listen(process.env.PORT || 3069)) // we want to listen for  after server is connected to mongodb
 .catch((error) => console.log(error)) ;
 
 
